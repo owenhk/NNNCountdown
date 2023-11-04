@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+}
+
 {
     margin: 0;
     padding: 0;
@@ -7,8 +16,8 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    background-color: #f2edf7;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     color: #dad3f0;
     position: relative
 }
@@ -23,34 +32,12 @@
 .clock {
     width: 100%;
     height: 100%;
-    background: rgba(225, 0, 225, 0.11);
+    background: rgba(28, 68, 100, 0.25);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(40px);
-}
-.container::before{
-    content: '';
-    width: 180px;
-    height: 180px;
-    background: #9599E2;
-    border-radius: 5px;
-    position: absolute;
-    left: -50px;
-    top: -50px;
-    z-index: -1;
-}
-.container::after{
-    content: '';
-    width: 180px;
-    height: 180px;
-    background: palevioletred;
-    border-radius: 50px;
-    position: absolute;
-    right: -30px;
-    bottom: -50px;
-    z-index: -1;
 }
 .clock span{
     font-size: 80px;
@@ -78,6 +65,28 @@
 #sec::after{
     content: 'SECONDS'
 }
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Styles for the badge */
+    /* ... */
+}
+.badge-inner {
+    /* Styles for the inner part of the badge, including dynamic background for progress */
+    /* ... */
+}
+.percent-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Style your label here */
+    font-size: 14px;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 600px;
