@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>When Can I Nut - NNN Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero">
+    <div class="container">
+        <h1>When Can I Nut?</h1>
+        <div class="clock">
+            <span id="days">00</span>
+            <span>:</span>
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+</div>
+<script>
+    var countDownDate = new Date("Dec 1, 2023 00:00:00").getTime(); // Set this to your target date
+
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hrs").innerHTML = hours;
+        document.getElementById("min").innerHTML = minutes;
+        document.getElementById("sec").innerHTML = seconds;
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "GO";
+            document.getElementById("hrs").innerHTML = "FAP";
+            document.getElementById("min").innerHTML = "YOUR";
+            document.getElementById("sec").innerHTML = "SELF";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
